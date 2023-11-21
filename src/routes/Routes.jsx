@@ -6,6 +6,7 @@ import Register from "../components/Register/Register";
 import Gallery from "../components/Gallery/Gallery";
 import Contact from "../components/Contact/Contact";
 import PackageDetails from "../components/PackageDetails/PackageDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -15,12 +16,12 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: ()=> fetch('wedding.json')
+                loader: () => fetch('wedding.json')
             },
             {
                 path: '/packagedetails/:id',
-                element: <PackageDetails></PackageDetails>,
-                loader: ()=> fetch('wedding.json')
+                element: <PrivateRoute><PackageDetails></PackageDetails></PrivateRoute>,
+                loader: () => fetch('wedding.json')
             },
             {
                 path: '/gallary',
