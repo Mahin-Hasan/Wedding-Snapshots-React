@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "package_name": "Classic Elegance",
+        "image_url": "https://i.ibb.co/jwJH9Lr/item-1.png",
+        "price": 5000,
+        "package_description": "A timeless package with classic decor and elegant ambiance."
+    },
+    {
+        "id": 2,
+        "package_name": "Rustic Romance",
+        "image_url": "https://i.ibb.co/8c8pwWL/item2.jpg",
+        "price": 4500,
+        "package_description": "Embrace the charm of rustic settings with this romantic package."
+    },
+    {
+        "id": 3,
+        "package_name": "Luxury Bliss",
+        "image_url": "https://i.ibb.co/HDscrct/item3.jpg",
+        "price": 8000,
+        "package_description": "Indulge in luxury and create blissful memories with this exquisite package."
+    },
+    {
+        "id": 4,
+        "package_name": "Garden Serenity",
+        "image_url": "https://i.ibb.co/BccSkC2/item-4.png",
+        "price": 6000,
+        "package_description": "Celebrate in the serenity of nature with our enchanting garden package."
+    },
+    {
+        "id": 5,
+        "package_name": "Beach Paradise",
+        "image_url": "https://i.ibb.co/CwxMfqt/item5.png",
+        "price": 7000,
+        "package_description": "Exchange vows by the sea and experience the paradise of a beach wedding."
+    },
+    {
+        "id": 6,
+        "package_name": "Modern Chic",
+        "image_url": "https://i.ibb.co/BT0dZVK/item6.png",
+        "price": 5500,
+        "package_description": "For the trendsetters, this package offers a chic and modern wedding experience."
+    }
+]
