@@ -8,7 +8,7 @@ const PackageCategory = ({ category }) => {
             <div className="card-body">
                 <div className="flex justify-around">
                     <h2 className="card-title">{package_name}</h2>
-                    <Link to={`packagedetails/${id}`}><button className="btn btn-warning">Show Details</button></Link>
+                    <Link to={`packagedetails/${id}`}><button className="btn btn-outline bg-[#c8b293] hover:bg-stone-500 text-white">Show Details</button></Link>
                 </div>
             </div>
         </div>
