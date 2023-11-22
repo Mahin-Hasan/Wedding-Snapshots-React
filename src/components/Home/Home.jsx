@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+// import { useLoaderData } from "react-router-dom";
 import PackageCategory from "../PackageCategory/PackageCategory";
 import { useEffect, useState } from "react";
 
@@ -12,6 +12,7 @@ const Home = () => {
             .then(res => res.json())
             .then(data => setCategories(data))
     }, [])
+    console.log(categories);
 
     return (
         <section>

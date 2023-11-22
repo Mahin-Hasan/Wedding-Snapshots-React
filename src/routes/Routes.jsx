@@ -7,21 +7,24 @@ import Gallery from "../components/Gallery/Gallery";
 import Contact from "../components/Contact/Contact";
 import PackageDetails from "../components/PackageDetails/PackageDetails";
 import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('wedding.json')
+                // loader: () => fetch('wedding.json')
             },
             {
                 path: '/packagedetails/:id',
                 element: <PrivateRoute><PackageDetails></PackageDetails></PrivateRoute>,
-                loader: () => fetch('wedding.json')
+                loader: () => fetch('/wedding.json')
+
             },
             {
                 path: '/gallary',

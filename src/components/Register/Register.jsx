@@ -1,28 +1,48 @@
 import { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../providers/AuthProvider";
-
+import { Link, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+import { updateProfile } from "firebase/auth";
 
 
 const Register = () => {
     const { createUser, googleLogin } = useContext(AuthContext);
-
-
+    const navigate = useNavigate()
 
     const handleRegistration = e => {
         console.log('clicked');
         e.preventDefault();
         const name = e.target.name.value;
-        const image = e.target.image.value;
+        const imageUrl = e.target.image.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(name, image, email, password);
+        console.log(name, imageUrl, email, password);
+
+        //validation
+        if (password.length < 6) {
+            toast.error(`password can not be less than 6 character`);
+            return;
+        }
+        else if (!/[A-Z]/.test(password)) {
+            toast.error('Must contain at least one capital letter')
+            return;
+        }
+        /*
+        add special ch validation
+        */
 
 
         //create user with email and pass
         createUser(email, password)
             .then(res => {
                 console.log(res.user);
+                toast.success('Registration Successful')
+                updateProfile(res.user, {
+                    displayName: name,
+                    photoURL: imageUrl
+                })
+                navigate('/')
             })
             .catch(err => {
                 console.error(err);
@@ -60,7 +80,7 @@ const Register = () => {
                                     <label className="label">
                                         <span className="label-text">Photo URL</span>
                                     </label>
-                                    <input type="text" name="image" placeholder="Image URL" className="input input-bordered" required />
+                                    <input type="text" name="image" placeholder="Image URL" className="input input-bordered" />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
@@ -77,6 +97,9 @@ const Register = () => {
                                         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                     </label> */}
                                 </div>
+                                <label className="label">
+                                    <span href="#" className="label-text-alt link link-hover">Already have an account? <Link className="border-b font-semibold border-primary text-primary" to='/login'>Login</Link></span>
+                                </label>
                                 <div className="form-control mt-6">
                                     <button className="btn btn-primary">Register</button>
                                 </div>
