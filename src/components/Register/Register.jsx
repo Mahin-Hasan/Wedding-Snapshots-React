@@ -28,6 +28,10 @@ const Register = () => {
             toast.error('Must contain at least one capital letter')
             return;
         }
+        else if (!/[^a-zA-Z0-9]/.test(password)) {
+            toast.error('Must contain at least one special character')
+            return;
+        }
         /*
         add special ch validation
         */
@@ -101,13 +105,12 @@ const Register = () => {
                                     <span href="#" className="label-text-alt link link-hover">Already have an account? <Link className="border-b font-semibold border-primary text-primary" to='/login'>Login</Link></span>
                                 </label>
                                 <div className="form-control mt-6">
-                                    <button className="btn btn-primary">Register</button>
+                                <button className="btn btn-outline bg-[#c8b293] hover:bg-stone-600 text-white rounded-md">Register</button>
                                 </div>
                             </form>
                             <div className="form-control mt-2">
-                                <button onClick={handleGoogleSignUp} className="btn btn-primary"><FaGoogle /> Sign Up With Google</button>
+                                <button onClick={handleGoogleSignUp} className="btn btn-outline btn-primary"><FaGoogle /> Sign Up With Google</button>
                             </div>
-
                         </div>
                     </div>
                 </div>

@@ -26,7 +26,6 @@ const Home = () => {
     return (
         <section className="mx-2 sm:mx-0">
             <div className="container mx-auto">
-                <h1>Banner from nice page</h1>
                 <div className="">
                     <div className="flex items-center justify-between xl:justify-around flex-col sm:flex-row">
                         <div className="w-52 -left-20 sm:-left-0 lg:w-80 md:w-60 sm:w-48 border-4 border-[#b79d79] relative sm:top-10 rounded-full">
@@ -97,7 +96,7 @@ const Home = () => {
                         {/* info */}
                         <h1 className="text-4xl tracking-wider uppercase">the experience</h1>
                         <h3 className=" text-xl tracking-wide uppercase">all inclusive wedding packages</h3>
-                        <p className="font-sans text-lg">The Farmhouse provides an intimate setting for your wedding ceremony and reception, all in one convenient location.</p>
+                        <p className="font-sans text-lg">The Wedding Snapshots provides an intimate setting for your wedding ceremony and reception, all in one convenient location.</p>
                         <p className="font-sans text-lg">The all inclusive wedding package creates a stress free experience for your perfect wedding day. The packages include a premium open bar, gourmet food prepared onsite, linens & napkins in your choice of color, candle centerpieces, wedding cake, hotel accommodations, wedding coordinator & more</p>
                         <button className="btn-lg btn-outline bg-[#c8b293] hover:bg-stone-600 text-white rounded-md">View wedding packages</button>
                     </div>
@@ -113,7 +112,7 @@ const Home = () => {
                     </div>
                 </div>
                 {/* reversed */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-32">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
                     <div className="relative pe-10 sm:px-0">
                         <div className="bg-[#c8b293]">
                             {/* picture */}
@@ -127,10 +126,11 @@ const Home = () => {
                     <div className="text-stone-500 space-y-4 text-end pl-8 mt-10 sm:mt-0">
                         {/* info */}
                         <h1 className="text-4xl tracking-wider uppercase">the venue</h1>
-                        <h3 className=" text-xl tracking-wide uppercase">beautifully restored farmhouse & estate</h3>
-                        <p className="font-sans text-lg">The Farmhouse provides an intimate setting for your wedding ceremony and reception, all in one convenient location.</p>
-                        <p className="font-sans text-lg">The all inclusive wedding package creates a stress free experience for your perfect wedding day. The packages include a premium open bar, gourmet food prepared onsite, linens & napkins in your choice of color, candle centerpieces, wedding cake, hotel accommodations, wedding coordinator & more</p>
-                        <button className="btn-lg btn-outline bg-[#c8b293] hover:bg-stone-600 text-white rounded-md">View wedding packages</button>
+                        <h3 className=" text-xl tracking-wide uppercase">beautifully restored outdoor loactions</h3>
+                        <p className="font-sans text-lg">The Wedding Snapshots offers intimate indoor spaces for your event including the bright and open main terrace hall, indoor lounge and bar, dressing suites and more. Outside, a large wrap around  deck and patio overlook the gazebo bar & gardens.</p>
+                        <p className="font-sans text-lg">The historical estate boasts a picturesque outdoor ceremony site underneath romantic willow trees & four acres of manicured
+grounds and gardens</p>
+                        <button className="btn-lg btn-outline bg-[#c8b293] hover:bg-stone-600 text-white rounded-md">View outdoor packages</button>
                     </div>
                 </div>
             </div>

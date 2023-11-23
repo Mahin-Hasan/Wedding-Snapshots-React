@@ -3,6 +3,7 @@ import logo from '../../assets/logo.png'
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
+
 const Navbar = () => {
     const { userState, logOut } = useContext(AuthContext)
 
@@ -15,25 +16,25 @@ const Navbar = () => {
     const navlinks = <>
         <li className="mr-4 text-lg font-semibold"><NavLink to='/'
             className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "text-amber-600 border-b-2 border-amber-900" : "text-amber-500"
+                isPending ? "pending" : isActive ? "text-amber-500 border-b-2 border-amber-900" : "text-[#c49350]"
             }
         >Home</NavLink></li>
         <li className="mr-4 text-lg font-semibold"><NavLink to='/gallary'
             className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "text-amber-600 border-b-2 border-amber-900" : "text-amber-500"
+                isPending ? "pending" : isActive ? "text-amber-500 border-b-2 border-amber-900" : "text-[#c49350]"
             }
         >Gallery</NavLink></li>
         <li className="mr-4 text-lg font-semibold"><NavLink to='/contact'
             className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "text-amber-600 border-b-2 border-amber-900" : "text-amber-500"
+                isPending ? "pending" : isActive ? "text-amber-500 border-b-2 border-amber-900" : "text-[#c49350]"
             }
         >Contact</NavLink></li>
     </>
 
 
     return (
-        <nav className="container mx-auto">
-            <div className="navbar bg-base-100">
+        <nav className="container mx-auto mb-14">
+            <div className="navbar bg-[#fcf9f3]">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -54,15 +55,14 @@ const Navbar = () => {
                     {
                         userState ?
                             <div className="flex items-center">
-                                <img className="w-12 rounded-full mr-3 border-2 border-amber-500" src={userState.photoURL} alt="pic" />
-                                <p className="mr-3">{userState.displayName}</p>
+                                <img className="w-12 rounded-full mr-3 border-2 border-[#c49350]" src={userState.photoURL} alt="pic" />
+                                <p className="mr-3 font-mono font-semibold text-stone-500">{userState.displayName}</p>
                                 <Link onClick={handleLogOut} to='/register'><button className="btn btn-sm btn-outline btn-warning">Sign Out</button></Link>
                             </div>
                             :
-                            <Link to='/login'><button className="btn btn-sm btn-outline btn-accent">log in</button></Link>
+                            <Link to='/login'><button className="btn btn-sm btn-outline btn-info">log in</button></Link>
 
                     }
-
 
                 </div>
             </div>

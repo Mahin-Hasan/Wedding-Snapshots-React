@@ -4,7 +4,7 @@ const PackageCategory = ({ category }) => {
     const { id, package_name, image_url } = category;
     return (
         <div className="card w-full bg-base-100 shadow-xl">
-            <figure><img src={image_url} alt="Shoes" /></figure>
+            <figure><img className="w-full" src={image_url} alt="Shoes" /></figure>
             <div className="card-body">
                 <div className="flex justify-around">
                     <h2 className="card-title">{package_name}</h2>
