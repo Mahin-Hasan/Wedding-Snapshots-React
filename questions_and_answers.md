@@ -20,8 +20,8 @@ console.log(greetign);
 
 #### Answer: B?
 
-<i>Write your explanation here</i>
-greetign in not initialized. we should be careful while assigning as javascript is case sensitive.
+<i>greetign in not initialized. we should be careful while assigning as javascript is case sensitive.</i>
+
 </p>
 </details>
 
@@ -45,8 +45,8 @@ sum(1, "2");
 
 #### Answer: C?
 
-<i>Write your explanation here</i>
-As parameter a is number and b is a string so javascript will concate as string.
+<i>As parameter 'a' is number and 'b' is a string so javascript will concate as string.</i>
+
 </p>
 </details>
 
@@ -71,8 +71,7 @@ console.log(food);
 
 #### Answer: A?
 
-<i>Write your explanation here</i>
-because changes are made to const info which is not the original array. this original array remain unchanged.
+<i>because changes are made to const info which is not the original array. this original array remain unchanged.</i>
 </p>
 </details>
 
@@ -96,8 +95,7 @@ console.log(sayHi());
 
 #### Answer: B?
 
-<i>Write your explanation here</i>
-No parameter was given to the funciton when called. for this reason it becomes undefined.
+<i>No parameter was given to the funciton when called. for this reason it becomes undefined.</i>
 </p>
 </details>
 
@@ -124,7 +122,7 @@ console.log(count);
 
 #### Answer: C?
 
-<i>Write your explanation here</i>
-in the if statement count will only be incremented if the value of num is truthy. in the given nums array the 0 position index is 0 and it has total of 4 element. count is increased for 1,2,3 which sum up to 3.
+<i>in the if statement count will only be incremented if the value of num is truthy. in the given nums array the 0 position index is 0 and it has total of 4 element. count is increased for 1,2,3 which sum up to 3.</i>
+
 </p>
 </details>
