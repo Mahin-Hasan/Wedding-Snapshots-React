@@ -1,7 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import toast from "react-hot-toast";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
 
 
 
@@ -10,6 +12,7 @@ const Login = () => {
     const { signIn } = useContext(AuthContext);
     const location = useLocation(); //get previous denied private route
     const navigate = useNavigate();
+    const [visibility, setVisibility] = useState(false)
 
 
 
@@ -50,13 +53,23 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+                                <input
+                                    type={visibility ? "text" : "password"}
+                                    name="password"
+                                    placeholder="password"
+                                    className="input input-bordered"
+                                    required />
+                                <span className="relative left-52 bottom-8 text-emerald-800 text-lg" onClick={() => setVisibility(!visibility)}>
+                                    {
+                                            visibility ? <FaEyeSlash /> : <FaEye/>
+                                    }
+                                </span>
                                 <label className="label">
                                     <span href="#" className="label-text-alt link link-hover">Do not have an account? <Link className="border-b font-semibold border-primary text-primary" to='/register'>Register</Link></span>
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                            <button className="btn btn-outline bg-[#c8b293] hover:bg-stone-600 text-white rounded-md">Login</button>
+                                <button className="btn btn-outline bg-[#c8b293] hover:bg-stone-600 text-white rounded-md">Login</button>
                             </div>
                         </form>
                     </div>

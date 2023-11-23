@@ -10,6 +10,8 @@ import experience from '../../assets/experience.png'
 import venue from '../../assets/venue.png'
 import './Home.css'
 import { Link } from "react-router-dom";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Home = () => {
     // const categories = useLoaderData();
@@ -23,10 +25,14 @@ const Home = () => {
     }, [])
     console.log(categories);
 
+    useEffect(()=>{
+        Aos.init({duration:1800});
+    },[])
+
     return (
         <section className="mx-2 sm:mx-0">
             <div className="container mx-auto">
-                <div className="">
+                <div className="" data-aos="fade-down">
                     <div className="flex items-center justify-between xl:justify-around flex-col sm:flex-row">
                         <div className="w-52 -left-20 sm:-left-0 lg:w-80 md:w-60 sm:w-48 border-4 border-[#b79d79] relative sm:top-10 rounded-full">
                             <img className="rounded-full" src={banner1} alt="" />
@@ -51,14 +57,14 @@ const Home = () => {
                     </div>
                 </div>
                 {/* banner description */}
-                <div className="text-center max-w-2xl mx-auto space-y-6">
+                <div className="text-center max-w-2xl mx-auto space-y-6" data-aos="fade-up">
                     <h1 className="text-2xl mt-6 sm:text-5xl capitalize text-stone-500 font-medium leading-none sm:leading-normal">Are you dreaming of a romantic wedding?</h1>
                     <p className="text-stone-400 leading-normal">
                         Imagine waking up to a job that lifts you up and transports you to a different world. A world populated with a billion heartfelt feelings and stories etched ceremoniously in magic, love and joie de vivre. Perfect with its Disney-like happy endings, sworn vows and the promises of forever. This is our world. The Wedding Story world! <br />See our work <Link className="text-amber-700 underline font-semibold" to='/gallary'>Gallary</Link></p>
                 </div>
             </div>
             {/* package section */}
-            <div className="my-16">
+            <div className="my-16" data-aos="zoom-in">
                 <div className="text-center mb-10">
                     <h1 className="text-2xl sm:text-5xl capitalize text-stone-500 font-medium leading-none sm:leading-normal">all inclusive wedding packages</h1>
                     <p className="text-lg text-stone-400 leading-normal max-w-6xl mx-auto">Wedding Snapshots provides an intimate setting for your wedding ceremony and reception, all in one convenient location. Choose desired package to your choice</p>
@@ -91,7 +97,7 @@ const Home = () => {
             </div>
             {/* Experiance Section */}
             <div className="container mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-32">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-32" data-aos="fade-right">
                     <div className="text-stone-500 space-y-4 pr-8 ">
                         {/* info */}
                         <h1 className="text-4xl tracking-wider uppercase">the experience</h1>
@@ -112,7 +118,7 @@ const Home = () => {
                     </div>
                 </div>
                 {/* reversed */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12" data-aos="fade-left">
                     <div className="relative pe-10 sm:px-0">
                         <div className="bg-[#c8b293]">
                             {/* picture */}
@@ -129,7 +135,7 @@ const Home = () => {
                         <h3 className=" text-xl tracking-wide uppercase">beautifully restored outdoor loactions</h3>
                         <p className="font-sans text-lg">The Wedding Snapshots offers intimate indoor spaces for your event including the bright and open main terrace hall, indoor lounge and bar, dressing suites and more. Outside, a large wrap around  deck and patio overlook the gazebo bar & gardens.</p>
                         <p className="font-sans text-lg">The historical estate boasts a picturesque outdoor ceremony site underneath romantic willow trees & four acres of manicured
-grounds and gardens</p>
+                            grounds and gardens</p>
                         <button className="btn-lg btn-outline bg-[#c8b293] hover:bg-stone-600 text-white rounded-md">View outdoor packages</button>
                     </div>
                 </div>
